@@ -128,9 +128,27 @@ table {
   border-spacing: 0;
 }
 
+html body {
+  font-family: "Roboto", sans-serif, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Variables =============================== */
+:root {
+  /* Colors */
+  --blue-color: #1992d3;
+  --yellow-color: #f0b329;
+  --lightgrey-color: #e1e8ef;
+  --white-color: #ffffff;
+  --grey-color: #636363;
+
+  /* Measurements */
+}
+
 /* Container */
 .container * {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 /* Container */
@@ -147,6 +165,7 @@ table {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   padding: 16px 20px;
+  background-color: var(--white-color);
 }
 
 .h-top {
@@ -185,12 +204,74 @@ table {
   grid-template-rows: repeat(3, max-content);
   row-gap: 60px;
   padding: 22px;
+  background-color: var(--blue-color);
 }
 
 .sidebar .sb-options,
 .sidebar .sb-settings {
   display: grid;
   gap: 22px;
+}
+
+/* Sidebar Content */
+.sb-logo a,
+.sb-options a,
+.sb-settings a {
+  display: grid;
+  /* width: 100%; */
+  background-color: transparent;
+  border: none;
+  grid-template-columns: 50px auto;
+  grid-auto-rows: 28px;
+  align-items: center;
+  cursor: pointer;
+  color: var(--white-color);
+  text-align: left;
+  padding: 0;
+}
+
+.sb-logo a {
+  grid-auto-rows: 50px;
+}
+
+span.sb-icon {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+span.logo {
+  background-image: url("../img/view-dashboard.png");
+}
+span.home {
+  background-image: url("../img/home.png");
+}
+span.prof {
+  background-image: url("../img/account.png");
+}
+span.msg {
+  background-image: url("../img/forum.png");
+}
+span.hist {
+  background-image: url("../img/history.png");
+}
+span.task {
+  background-image: url("../img/check-circle.png");
+}
+span.comm {
+  background-image: url("../img/account-multiple.png");
+}
+span.sett {
+  background-image: url("../img/cog-outline.png");
+}
+span.supp {
+  background-image: url("../img/help-rhombus.png");
+}
+span.priv {
+  background-image: url("../img/security.png");
 }
 
 /* Content */
@@ -201,6 +282,7 @@ table {
   grid-template-rows: 1fr 1fr;
   padding: 32px 32px 32px 20px;
   gap: 20px;
+  background-color: var(--lightgrey-color);
 }
 
 .content-project {
