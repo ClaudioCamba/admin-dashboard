@@ -128,13 +128,10 @@ table {
   border-spacing: 0;
 }
 
-html body {
+html body * {
   font-family: "Roboto", sans-serif, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
-}
-
-body * {
   box-sizing: border-box;
 }
 
@@ -156,11 +153,7 @@ img {
   font-size: 16px;
   --sb-h1-size: 1.8rem;
   --sb-span-size: 1.35rem;
-}
-
-/* Container */
-.container * {
-  /* border: 1px solid red; */
+  --h-btn-size: 1rem;
 }
 
 /* Container */
@@ -208,9 +201,21 @@ img {
 
 .h-btm-buttons {
   display: grid;
-  grid-template-columns: repeat(3, 150px);
+  grid-template-columns: repeat(3, 100px);
+  gap: 28px;
   align-items: center;
   justify-content: center;
+}
+
+.h-btm-buttons button {
+  height: 40px;
+  border-radius: 40px;
+  border: none;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  font-weight: 500;
+  font-size: var(--h-btn-size);
+  cursor: pointer;
 }
 
 /* Header Content */
