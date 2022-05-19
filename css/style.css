@@ -244,34 +244,34 @@ span.sb-icon {
 }
 
 span.logo {
-  background-image: url("../img/view-dashboard.png");
+  background-image: url("../img/view-dashboard.svg");
 }
 span.home {
-  background-image: url("../img/home.png");
+  background-image: url("../img/home.svg");
 }
 span.prof {
-  background-image: url("../img/account.png");
+  background-image: url("../img/account.svg");
 }
 span.msg {
-  background-image: url("../img/forum.png");
+  background-image: url("../img/forum.svg");
 }
 span.hist {
-  background-image: url("../img/history.png");
+  background-image: url("../img/history.svg");
 }
 span.task {
-  background-image: url("../img/check-circle.png");
+  background-image: url("../img/check-circle.svg");
 }
 span.comm {
-  background-image: url("../img/account-multiple.png");
+  background-image: url("../img/account-multiple.svg");
 }
 span.sett {
-  background-image: url("../img/cog-outline.png");
+  background-image: url("../img/cog-outline.svg");
 }
 span.supp {
-  background-image: url("../img/help-rhombus.png");
+  background-image: url("../img/help-rhombus.svg");
 }
 span.priv {
-  background-image: url("../img/security.png");
+  background-image: url("../img/security.svg");
 }
 
 /* Content */
