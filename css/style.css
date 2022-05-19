@@ -144,6 +144,8 @@ html body {
   --grey-color: #636363;
 
   /* Measurements */
+  --sb-h1-size: 1.8rem;
+  --sb-span-size: 1.35rem;
 }
 
 /* Container */
@@ -222,12 +224,13 @@ html body {
   background-color: transparent;
   border: none;
   grid-template-columns: 50px auto;
-  grid-auto-rows: 28px;
+  grid-auto-rows: 25px;
   align-items: center;
   cursor: pointer;
   color: var(--white-color);
   text-align: left;
   padding: 0;
+  gap: 14px;
 }
 
 .sb-logo a {
@@ -272,6 +275,16 @@ span.supp {
 }
 span.priv {
   background-image: url("../img/security.svg");
+}
+
+.sb-logo h1 {
+  font-size: var(--sb-h1-size);
+  font-weight: 500;
+}
+
+.sidebar li a {
+  font-size: var(--sb-span-size);
+  font-weight: 500;
 }
 
 /* Content */
