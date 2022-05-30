@@ -140,6 +140,16 @@ img {
   height: auto;
 }
 
+.project-block > div button,
+span.sb-icon,
+.search-icon,
+.notify-icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
 /* Variables =============================== */
 :root {
   /* Colors */
@@ -148,14 +158,17 @@ img {
   --lightgrey-color: #e1e8ef;
   --white-color: #ffffff;
   --grey-color: #636363;
+  --black-color: #000000;
 
   /* Measurements */
   font-size: 16px;
   --sb-h1-size: 1.8rem;
   --sb-span-size: 1.35rem;
   --h-btn-size: 1rem;
+  --txt-115-size: 1.15rem;
 
   /* Effects */
+  --weight-500: 500;
   --card-radius: 6px;
   --px22-space: 22px;
 }
@@ -221,20 +234,12 @@ img {
   border: none;
   background-color: var(--blue-color);
   color: var(--white-color);
-  font-weight: 500;
+  font-weight: var(--weight-500);
   font-size: var(--h-btn-size);
   cursor: pointer;
 }
 
 /* Header Content */
-.search-icon,
-.notify-icon {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
-}
-
 .search-icon {
   background-image: url("../img/magnify.svg");
 }
@@ -262,7 +267,7 @@ input[type="search"] {
 
 .h-top .user {
   font-size: 1.18rem;
-  font-weight: 500;
+  font-weight: var(--weight-500);
 }
 
 .user-info {
@@ -283,11 +288,11 @@ input[type="search"] {
   display: flex;
   align-items: end;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: var(--weight-500);
 }
 
 .h-btm .user {
-  font-weight: 500;
+  font-weight: var(--weight-500);
   font-size: 1.54rem;
 }
 
@@ -337,10 +342,6 @@ ul.sb-options {
 span.sb-icon {
   width: 100%;
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: relative;
 }
 
 span.logo {
@@ -376,12 +377,12 @@ span.priv {
 
 .sb-logo h1 {
   font-size: var(--sb-h1-size);
-  font-weight: 500;
+  font-weight: var(--weight-500);
 }
 
 .sidebar li a {
   font-size: var(--sb-span-size);
-  font-weight: 500;
+  font-weight: var(--weight-500);
 }
 
 /* Content */
@@ -392,6 +393,7 @@ span.priv {
   grid-template-rows: 1fr 1fr;
   padding: 38px 32px 32px 20px;
   gap: 22px;
+  row-gap: 40px;
   background-color: var(--lightgrey-color);
   z-index: 1;
 }
@@ -402,10 +404,14 @@ span.priv {
 
 .announcements {
   grid-area: 1 / 2 / 2 / 3;
+  display: grid;
+  grid-template-rows: max-content auto;
 }
 
 .trending {
   grid-area: 2 / 2 / 3 / 3;
+  display: grid;
+  grid-template-rows: max-content auto;
 }
 
 .projects {
@@ -419,7 +425,7 @@ span.priv {
 /* Content Contents */
 .content .title {
   font-size: 1.28rem;
-  font-weight: 500;
+  font-weight: var(--weight-500);
   margin-bottom: 14px;
 }
 
@@ -428,14 +434,78 @@ span.priv {
   border-left: 8px var(--yellow-color) solid;
   border-radius: 8px;
   padding: var(--px22-space);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   position: relative;
+  -webkit-box-shadow: 5px 5px 5px -2px #ccd1d9;
+  box-shadow: 5px 5px 5px -2px #ccd1d9;
 }
 
+.project-block h3 {
+  font-weight: var(--weight-500);
+  font-size: var(--txt-115-size);
+  margin-bottom: 10px;
+}
+
+.project-block p {
+  color: var(--grey-color);
+  line-height: 1.2;
+  font-size: var(--h-btn-size);
+}
 .project-block > div {
+  font-size: 0;
   position: absolute;
   bottom: var(--px22-space);
   right: var(--px22-space);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin: 0 16px;
+}
+
+.project-block > div button {
+  border: 0;
+  margin: 0;
+  font-size: 0;
+  padding: 12px;
+  color: var(--white-color);
+  background-color: var(--white-color);
+  cursor: pointer;
+}
+
+.watch {
+  background-image: url("../img/eye-plus-outline.svg");
+}
+
+.star {
+  background-image: url("../img/star-plus-outline.svg");
+}
+
+.share {
+  background-image: url("../img/share.svg");
+}
+
+/* Sidebar - right */
+.announce-list,
+.trending-list {
+  background-color: var(--white-color);
+  padding: var(--px22-space);
+  border-radius: 8px;
+  -webkit-box-shadow: 5px 5px 5px -2px #ccd1d9;
+  box-shadow: 5px 5px 5px -2px #ccd1d9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.announce-list li {
+  border-bottom: 1px solid #d2d2d2;
+  color: var(--grey-color);
+}
+
+.announce-list li h5 {
+  color: var(--black-color);
+  font-size: 0.9rem;
+  font-weight: var(--weight-500);
+}
+.announce-list li p {
+  font-size: 0.77rem;
 }
